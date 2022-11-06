@@ -12,18 +12,18 @@ export const Header = () => {
         </h1>
       </div>
       <div className="flex items-center cursor-pointer text-md gap-x-8 w-[75%] ">
-        <button className="flex items-center justify-center gap-x-2">
+        <button className="flex p-1 items-center justify-center gap-x-2 hover:bg-slate-400  hover:rounded-lg">
           <AiOutlineHome size={20} />
           <h3>Ana Sayfa</h3>
         </button>
-        <button className="flex items-center justify-center gap-x-2">
+        <button className="flex p-1 items-center justify-center gap-x-2  hover:bg-slate-400  hover:rounded-lg">
           <AiOutlineDotChart size={20} />
           <h3>Tahlil Sonuçlarım</h3>
         </button>
       </div>
-      <div className=" w-[10%] h-fit p-1 text-center border rounded-md bg-slate-400 border-gray-600 ">
+      <button className=" w-[10%] h-fit p-1 text-center border rounded-md bg-slate-400 border-gray-600  hover:bg-gray-600 ">
         Kullanıcı Adı
-      </div>
+      </button>
     </div>
   );
 };
