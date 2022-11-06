@@ -1,29 +1,10 @@
 import { AiOutlineUpload, AiOutlineLoading3Quarters } from "react-icons/ai";
 import React from "react";
-import { useState } from "react";
+import { useContext } from "react";
+import { cloudContext } from "../../Context/Context";
 
 export const Home = () => {
-  const [image, setImage] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  const uploadImage = async (e) => {
-    const files = e.target.files;
-    const data = new FormData();
-    data.append("file", files[0]);
-    data.append("upload_preset", "Traick");
-    setLoading(true);
-    const res = await fetch(
-      "https://api.cloudinary.com/v1_1/dsfbibgxq/image/upload",
-      {
-        method: "POST",
-        body: data,
-      }
-    );
-    const file = await res.json();
-
-    setImage(file.secure_url);
-    setLoading(false);
-  };
+  const { image, loading, uploadImage } = useContext(cloudContext);
 
   return (
     <div className="flex p-4 h-full text-white">
