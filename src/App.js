@@ -1,9 +1,13 @@
 import { Main } from "./Pages/Main";
+import { CloudinaryContext } from "cloudinary-react";
+import React from "react";
 
 function App() {
   return (
     <div>
-      <Main />
+      <CloudinaryContext cloudName="dsfbibgxq">
+        <Main />
+      </CloudinaryContext>
     </div>
   );
 }
